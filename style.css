@@ -6,6 +6,8 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background-color: #2f3542;
 }
 
@@ -18,7 +20,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     align-items: center;
-    background-color: rgba(164, 176, 190,.3);
+    background-color: rgba(87, 96, 111,1.0);
     padding: 14px 18px;
     border-radius: 6px;
     gap: 16px;
@@ -51,6 +53,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    font-family: "Roberto", sans-serif;
 }
 
 .modal form input {
@@ -68,6 +71,9 @@ body {
     font-size: 22px;
 }
 
+.rem,
+.info button,
+.header button,
 .modal button {
     color: #eee;
     border-style: none;
@@ -77,6 +83,7 @@ body {
     padding: 10px 16px;
     border-radius: 6px;
     cursor:pointer;
+    transition: 100ms ease-in;
 }
 
 #read {
@@ -101,4 +108,80 @@ body {
 
 #cancel {
     background-color: rgba(255, 71, 87,0.8);
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    color: #eee;
+    font-family: "Roberto", sans-serif;
+    font-size: 32px;
+    text-align: center;
+    border-bottom: 1px solid rgba(206, 214, 224,1.0);
+}
+
+#openModal {
+    font-family: "Roberto", sans-serif;
+    font-size: 36px;
+    transition: 100ms ease-in;
+}
+
+button:active {
+    transform: scale(0.9);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
+}
+
+
+.cards {
+    padding: 12px 24px;
+    display: flex;
+    gap: 16px;
+    height: 300px;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+    height: 300px;
+    border-radius: 6px;
+    background-color: rgba(116, 125, 140,1.0);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+.info h2,
+.info h3 {
+    color: #eee;
+    font-family: "Roberto", sans-serif;
+}
+
+.info button {
+    align-self: center;
+}
+
+.rem {
+    background-color: rgba(255, 71, 87,0.8);
+}
+
+.remove {
+    padding-bottom: 12px;
+}
+
+.info button.active {
+    background-color: rgba(255, 71, 87,0.4);
 }
