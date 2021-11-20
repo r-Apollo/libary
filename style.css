@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #2f3542;
+}
+
+/*Basic Modal styling*/
+.modal {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    align-items: center;
+    background-color: rgba(164, 176, 190,.3);
+    padding: 14px 18px;
+    border-radius: 6px;
+    gap: 16px;
+    z-index: 10;
+    transition: 200ms ease-in-out;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.overlay {
+    position: fixed;
+    background-color: black;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    pointer-events: none;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+}
+
+.overlay.active {
+    opacity: .5;
+    pointer-events: all;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modal form input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 20px;
+}
+
+.modal form div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: #eee;
+    font-size: 22px;
+}
+
+.modal button {
+    color: #eee;
+    border-style: none;
+    align-self: flex-start;
+    background-color: rgba(46, 213, 115,0.4);
+    font-size: 22px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor:pointer;
+}
+
+.modal button .fbtn {
+    background-color: rosybrown;
+}
+
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#add,
+#cancel {
+    font-size: 18px;
+}
+
+#cancel {
+    background-color: rgba(255, 71, 87,0.8);
+}
