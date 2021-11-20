@@ -79,6 +79,15 @@ body {
     cursor:pointer;
 }
 
+#read {
+    width: 100%;
+    transition: 100ms ease-in-out;
+}
+
+#read.active {
+    background-color: rgba(255, 71, 87,0.8);
+}
+
 .modal button .fbtn {
     background-color: rosybrown;
 }
@@ -88,11 +97,6 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-}
-
-#add,
-#cancel {
-    font-size: 18px;
 }
 
 #cancel {
